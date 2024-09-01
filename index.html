@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Mundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Mundo</h1>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-button" data-tab="sobre">Sobre</button>
+            <button class="tab-button" data-tab="planejamento">Planejamento</button>
+            <button class="tab-button" data-tab="sonhos">Sonhos</button>
+        </div>
+
+        <div class="tab-content">
+            <section id="sobre" class="tab-section">
+                <img id="perfil-img" src="imagens/Perfil.png" alt="Perfil">
+                <h2>Sobre</h2>
+                <p id="sobre-texto">Meu nome é Bruno, tenho 21 anos e atualmente estou mergulhado no mundo da programação, o que tem sido uma jornada emocionante e desafiadora. Minha paixão pela tecnologia e resolução de problemas me motivou a buscar um aprofundamento maior, e meu próximo passo é estudar Engenharia de Software. Estou ansioso para expandir meus conhecimentos e habilidades na criação de soluções robustas e inovadoras, contribuindo para o desenvolvimento de sistemas que façam a diferença. Com um entusiasmo constante por aprender e crescer, estou determinado a alcançar meus objetivos e construir uma carreira gratificante na área de tecnologia.</p>
+                <button id="toggle-sobre">Mostrar Mais</button>
+            </section>
+
+            <section id="planejamento" class="tab-section" style="display: none;">
+                <h2>Planejamento</h2>
+                <p>Meu planejamento para o futuro é claramente direcionado para o campo da Engenharia de Software e a realização de grandes objetivos pessoais e profissionais. Pretendo me formar em Engenharia de Software e, para isso, planejo me mudar para Portugal, onde começarei minha jornada acadêmica na Europa. Acredito que a educação na Europa me proporcionará uma base sólida e oportunidades valiosas para me tornar um engenheiro de software altamente qualificado. Minha meta é não apenas alcançar um alto nível de excelência na minha carreira, mas também proporcionar uma vida melhor para minha família, permitindo que eles desfrutem das maravilhas da Europa. Almejo conquistar grandes realizações e, assim, abrir novas portas e experiências que enriqueçam nossas vidas.</p>
+            </section>
+
+            <section id="sonhos" class="tab-section" style="display: none;">
+                <h2>Sonhos</h2>
+                <p>Meus sonhos são alimentados pela ambição de alcançar grandes conquistas e transformar minha vida e a de minha família de maneira significativa. Meu maior desejo é me formar em Engenharia de Software e iniciar minha trajetória acadêmica na Europa, começando por Portugal. Tenho o sonho de me estabelecer na Europa, onde espero crescer profissionalmente e me tornar um engenheiro de software de destaque. Além disso, almejo proporcionar uma vida melhor para minha família, oferecendo-lhes a oportunidade de vivenciar as maravilhas e a cultura rica da Europa. A realização desses sonhos não apenas representa a concretização dos meus objetivos profissionais e pessoais, mas também o desejo de compartilhar experiências inesquecíveis com aqueles que amo.</p>
+            </section>
+        </div>
+
+        <section>
+            <h2>Contato</h2>
+            <p>Bruno Braz - (35) 99720-2173</p>
+            <p>
+                <img src="imagens/icone-instagram.png" alt="Instagram"> <a href="https://www.instagram.com/bhenrii__" target="_blank" rel="noopener">Bhenrii__</a> - INSTAGRAM
+            </p>
+            <p>
+                <img src="imagens/icone-github.png" alt="GitHub"> <a href="https://github.com/Bhenrii" target="_blank" rel="noopener">Bhenrii</a> - GITHUB
+            </p>
+            <p>
+                <img src="imagens/icone-facebook.png" alt="Facebook"> <a href="https://www.facebook.com/bruno.braz.58118" target="_blank" rel="noopener">Bruno Braz</a> - FACEBOOK
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Mundo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    /* Reset básico para garantir uma aparência consistente em diferentes navegadores */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilização do corpo da página */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #ffffff;
+    }
+    
+    /* Estilização do cabeçalho */
+    header {
+        background: #333;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    
+    /* Estilização da área principal */
+    main {
+        padding: 2rem;
+    }
+    
+    section {
+        margin-bottom: 2rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Estilização do rodapé */
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+    /* Estilos das abas */
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .tab-button {
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .tab-button.active {
+        background: #555;
+    }
+
+    .tab-content {
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .tab-section {
+        display: none;
+    }
+
+    .tab-section.active {
+        display: block;
+    }
+
+</style>
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona elementos da aba e texto
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabSections = document.querySelectorAll('.tab-section');
+    const sobreTexto = document.getElementById('sobre-texto');
+    const toggleSobreButton = document.getElementById('toggle-sobre');
+
+    // Função para mostrar uma aba específica
+    function showTab(tabId) {
+        tabSections.forEach(section => {
+            section.style.display = section.id === tabId ? 'block' : 'none';
+        });
+
+        tabButtons.forEach(button => {
+            button.classList.toggle('active', button.dataset.tab === tabId);
+        });
+    }
+
+    // Inicializa com a aba "Sobre" ativa
+    showTab('sobre');
+
+    // Configuração inicial do texto "Sobre"
+    const textoCompleto = "Meu nome é Bruno, tenho 21 anos e atualmente estou mergulhado no mundo da programação, o que tem sido uma jornada emocionante e desafiadora. Minha paixão pela tecnologia e resolução de problemas me motivou a buscar um aprofundamento maior, e meu próximo passo é estudar Engenharia de Software. Estou ansioso para expandir meus conhecimentos e habilidades na criação de soluções robustas e inovadoras, contribuindo para o desenvolvimento de sistemas que façam a diferença. Com um entusiasmo constante por aprender e crescer, estou determinado a alcançar meus objetivos e construir uma carreira gratificante na área de tecnologia.";
+    const textoMostrado = textoCompleto.slice(0, 100) + '...'; // Mostra apenas os primeiros 100 caracteres
+
+    // Define o texto inicial e estado de expansão
+    sobreTexto.textContent = textoMostrado;
+    let textoExpandido = false;
+
+    // Adiciona evento de clique para o botão "Mostrar Mais/Mostrar Menos"
+    toggleSobreButton.addEventListener('click', () => {
+        if (textoExpandido) {
+            sobreTexto.textContent = textoMostrado;
+            toggleSobreButton.textContent = 'Mostrar Mais';
+        } else {
+            sobreTexto.textContent = textoCompleto;
+            toggleSobreButton.textContent = 'Mostrar Menos';
+        }
+        textoExpandido = !textoExpandido;
+    });
+
+    // Adiciona eventos de clique para os botões de abas
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            showTab(button.dataset.tab);
+        });
+    });
+});
+
+</script>
